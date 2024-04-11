@@ -8,10 +8,13 @@ machine uses linuxcnc (specifically qtplasmac) for control. Freecad has a
 postprocessor for milling operations and this modified postprocessor was based 
 on that. Qtplasmac takes over the z moves (probe metal - retract to torch start
 height - move to cutting height) so only requires gcode "m3 $0 S1" at start of
-each cut (or "m3 $2 S1" for spotting - centerpunching with the plasma cutter).
+each cut (or "m3 $2 S1" for spotting - centerpunching with the plasma cutter - 
+I use the drilling operation for this).
+
 For Freecad 0.21 the postprocessor should be placed in path
  - for windows  C:\Program Files\FreeCAD 0.21\Mod\Path\Path\Post\scripts
- - for linux 
+ - for linux   /usr/lib/freecad/Mod/Path/Post/scripts
+   
 Process
  - create model in Freecad PartDesign workbench (if the part is sheetmetal with
    bends then you have to unfold in the sheetmetal workbench)
